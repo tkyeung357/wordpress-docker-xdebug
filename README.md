@@ -9,3 +9,7 @@ setup wordpress local dev env
 ## docker
 login to container `docker exec -it <container_id> bash`
 build image `docker-compose build`
+
+## source mapping (phpstorm)
+<root path>/plugins -> /var/www/html/wp-content/plugins
+<root path>/wordpress -> /var/www/html
