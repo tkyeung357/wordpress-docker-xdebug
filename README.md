@@ -1,1 +1,2 @@
-# wordpress-docker-xdebug
+# wordpress-docker-xdebug 
+setup wordpress local dev env 
