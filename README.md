@@ -7,9 +7,10 @@ setup wordpress local dev env
 3. install docker desktop https://docs.docker.com/docker-for-windows/wsl/
 
 ## docker
-login to container `docker exec -it <container_id> bash`
-build image `docker-compose build`
+- login to container `docker exec -it <container_id> bash`
+- build image `docker-compose build`
 
 ## source mapping (phpstorm)
-<root path>/plugins -> /var/www/html/wp-content/plugins
-<root path>/wordpress -> /var/www/html
+1. <root path>/wordpress -> /var/www/html
+2. <root path>/plugins -> /var/www/html/wp-content/plugins
+
