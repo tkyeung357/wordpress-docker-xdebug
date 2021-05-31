@@ -27,6 +27,14 @@ services:
       WORDPRESS_DB_USER: wordpress_user
       WORDPRESS_DB_PASSWORD: wordpress_password
       WORDPRESS_DB_NAME: wordpress_db
+      CGP_API_ENDPOINT: 'http://dev.printerstudio.cn/cgp-rest'
+      CGP_API_USERNAME: 'ba_test@qpp.com'
+      CGP_API_PASSWORD: '123456'
+      CGP_API_PARTNERID: '856763'
+      WP_ENVIRONMENT_TYPE: 'local'
       XDEBUG_CONFIG: 'client_host=host.docker.internal remote_enable=1'
     volumes:
       - "./wordpress:/var/www/html"
+      # plugin source code mapping
+      # map plugin to container plugin folder
+      - "./plugins/qp-fanny-bag:/var/www/html/wp-content/plugins/qp-fanny-bag"
