@@ -12,8 +12,8 @@ RUN echo "xdebug.mode=debug" >> /usr/local/etc/php/conf.d/xdebug.ini && \
 
 
 #COMPOSER 
-RUN curl -sS https://getcomposer.org/installer | php
-RUN mv composer.phar /usr/local/bin/composer
+RUN curl -sS https://getcomposer.org/installer | php \
+&& mv composer.phar /usr/local/bin/composer
 
 #PHPUNIT
 RUN composer global require "phpunit/phpunit"
