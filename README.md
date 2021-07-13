@@ -1,4 +1,4 @@
-# wordpress-docker-xdebug 
+# wordpress-docker-xdebug-wsl2
 setup wordpress local dev env 
 
 #Windows
@@ -14,4 +14,4 @@ setup wordpress local dev env
 1. <root path>/wordpress -> /var/www/html
 2. <root path>/plugins -> /var/www/html/wp-content/plugins
 
-# wordpress-docker-xdebug-wsl2
+
