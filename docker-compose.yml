@@ -23,8 +23,6 @@ services:
     ports:
       - '80:80'
     environment:
-      # HTTP_PROXY: "host.docker.internal:8080/"
-      # HTTPS_PROXY: "host.docker.internal:8080/"
       WORDPRESS_DB_HOST: 'db:3306'
       WORDPRESS_DB_USER: wordpress_user
       WORDPRESS_DB_PASSWORD: wordpress_password
