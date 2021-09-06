@@ -10,6 +10,11 @@ RUN pecl install "xdebug" \
 RUN echo "xdebug.mode=debug" >> /usr/local/etc/php/conf.d/xdebug.ini && \
     echo "xdebug.start_with_request=yes" >> /usr/local/etc/php/conf.d/xdebug.ini
 
+RUN apt-get install -y npm
+
+RUN npm install less -g \
+    && npm install less-plugin-clean-css -g
+
 
 #COMPOSER 
 RUN curl -sS https://getcomposer.org/installer | php \
@@ -18,6 +23,6 @@ RUN curl -sS https://getcomposer.org/installer | php \
 #PHPUNIT
 RUN composer global require "phpunit/phpunit"
 
-ENV PATH /root/.composer/vendor/bin:$PATH
+ENV PATH /root/.config/composer/vendor/bin:$PATH
 
-RUN ln -s /root/.composer/vendor/bin/phpunit /usr/bin/phpunit
+RUN ln -s /root/.config/composer/vendor/bin/phpunit /usr/bin/phpunit
