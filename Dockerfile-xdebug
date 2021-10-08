@@ -26,3 +26,7 @@ RUN composer global require "phpunit/phpunit"
 ENV PATH /root/.config/composer/vendor/bin:$PATH
 
 RUN ln -s /root/.config/composer/vendor/bin/phpunit /usr/bin/phpunit
+
+#install wp cli
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && mv wp-cli.phar /usr/local/bin/wp
+RUN chmod +x /usr/local/bin/wp
